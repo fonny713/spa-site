@@ -153,17 +153,6 @@ export default function Home() {
     }
   }
 
-  const cardHoverVariants = {
-    hover: {
-      scale: 1.03,
-      y: -8,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut"
-      }
-    }
-  }
-
   return (
     <div ref={ref} className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
       {/* Header */}
@@ -427,7 +416,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div
                 key={service.name}
                 variants={itemVariants}
